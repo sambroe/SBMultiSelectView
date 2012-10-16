@@ -34,14 +34,26 @@
     [_multiSelectView setFrame:CGRectMake(20.0, 20.0, CGRectGetWidth(self.view.frame) - 40.0, CGRectGetHeight(self.view.frame) - 40.0)];
 }
 
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
+    {
+        [_multiSelectView setDirection:SBMultiSelectViewDirectionHorizontal];
+    }
+    else
+    {
+        [_multiSelectView setDirection:SBMultiSelectViewDirectionVertical];
+    }
+}
+
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-    return NO;
+    return YES;
 }
 
 -(NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskAll;
 }
 
 #pragma mark - SBMultiSelectViewDataSource/SBMultiSelectViewDelegate

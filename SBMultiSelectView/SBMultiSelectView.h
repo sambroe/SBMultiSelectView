@@ -41,6 +41,7 @@ SBMultiSelectViewDirection;
 @property (nonatomic, assign) id <SBMultiSelectViewDelegate> delegate;
 @property (nonatomic, retain) NSArray *selectedIndicies;
 @property (nonatomic, assign) SBMultiSelectViewDirection direction;
+@property (nonatomic, assign) BOOL scaleViewsToFit;
 
 -(id)initWithFrame:(CGRect)frame direction:(SBMultiSelectViewDirection)direction;
 

@@ -38,6 +38,7 @@
         
         _currentlySelectedIndex = -1;
         _direction = SBMultiSelectViewDirectionVertical;
+        _scaleViewsToFit = NO;
     }
     return self;
 }
@@ -68,13 +69,16 @@
     
     [_buttons enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
         
+        CGFloat width = (_scaleViewsToFit) ? floorf(CGRectGetWidth(self.frame)/_buttons.count) : CGRectGetWidth(button.frame);
+        CGFloat height = (_scaleViewsToFit) ? floorf(CGRectGetHeight(self.frame)/_buttons.count) : CGRectGetHeight(button.frame);
+        
         if (_direction == SBMultiSelectViewDirectionHorizontal)
         {
-            [button setFrame:CGRectMake(CGRectGetMaxX(lastRect), 0.0, CGRectGetWidth(button.frame), CGRectGetHeight(button.frame))];
+            [button setFrame:CGRectMake(CGRectGetMaxX(lastRect), 0.0, width, height)];
         }
         else
         {
-            [button setFrame:CGRectMake(0.0, CGRectGetMaxY(lastRect), CGRectGetWidth(button.frame), CGRectGetHeight(button.frame))];
+            [button setFrame:CGRectMake(0.0, CGRectGetMaxY(lastRect), width, height)];
         }
 
         lastRect = button.frame;
