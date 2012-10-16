@@ -7,140 +7,116 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C65E1AE162E0C5600A79DEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C65E1AD162E0C5600A79DEB /* UIKit.framework */; };
-		3C65E1B0162E0C5600A79DEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C65E1AF162E0C5600A79DEB /* Foundation.framework */; };
-		3C65E1B2162E0C5600A79DEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C65E1B1162E0C5600A79DEB /* CoreGraphics.framework */; };
-		3C65E1B8162E0C5600A79DEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E1B6162E0C5600A79DEB /* InfoPlist.strings */; };
-		3C65E1BA162E0C5600A79DEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E1B9162E0C5600A79DEB /* main.m */; };
-		3C65E1BE162E0C5600A79DEB /* PKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E1BD162E0C5600A79DEB /* PKAppDelegate.m */; };
-		3C65E1C0162E0C5600A79DEB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E1BF162E0C5600A79DEB /* Default.png */; };
-		3C65E1C2162E0C5600A79DEB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E1C1162E0C5600A79DEB /* Default@2x.png */; };
-		3C65E1C4162E0C5600A79DEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E1C3162E0C5600A79DEB /* Default-568h@2x.png */; };
-		3C65E1C7162E0C5600A79DEB /* PKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E1C6162E0C5600A79DEB /* PKViewController.m */; };
-		3C65E1CA162E0C5600A79DEB /* PKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E1C8162E0C5600A79DEB /* PKViewController.xib */; };
-		3C65E1D3162E0D8800A79DEB /* SBMultiSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E1D2162E0D8800A79DEB /* SBMultiSelectView.m */; };
-		3C65E1E0162E0DC300A79DEB /* SBDraggableSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E1DF162E0DC300A79DEB /* SBDraggableSelectionView.m */; };
-		3C65E1E3162E115600A79DEB /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E1E2162E115600A79DEB /* UIColor+Random.m */; };
+		3C65E1F4162E13CF00A79DEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C65E1F3162E13CF00A79DEB /* UIKit.framework */; };
+		3C65E1F6162E13CF00A79DEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C65E1F5162E13CF00A79DEB /* Foundation.framework */; };
+		3C65E1F8162E13CF00A79DEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C65E1F7162E13CF00A79DEB /* CoreGraphics.framework */; };
+		3C65E1FE162E13CF00A79DEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E1FC162E13CF00A79DEB /* InfoPlist.strings */; };
+		3C65E200162E13CF00A79DEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E1FF162E13CF00A79DEB /* main.m */; };
+		3C65E204162E13CF00A79DEB /* SBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E203162E13CF00A79DEB /* SBAppDelegate.m */; };
+		3C65E206162E13CF00A79DEB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E205162E13CF00A79DEB /* Default.png */; };
+		3C65E208162E13CF00A79DEB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E207162E13CF00A79DEB /* Default@2x.png */; };
+		3C65E20A162E13CF00A79DEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E209162E13CF00A79DEB /* Default-568h@2x.png */; };
+		3C65E20D162E13CF00A79DEB /* SBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E20C162E13CF00A79DEB /* SBViewController.m */; };
+		3C65E210162E13CF00A79DEB /* SBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E20E162E13CF00A79DEB /* SBViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C65E1A9162E0C5600A79DEB /* SBMultiSelectViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBMultiSelectViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C65E1AD162E0C5600A79DEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3C65E1AF162E0C5600A79DEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3C65E1B1162E0C5600A79DEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3C65E1B5162E0C5600A79DEB /* SBMultiSelectViewDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBMultiSelectViewDemo-Info.plist"; sourceTree = "<group>"; };
-		3C65E1B7162E0C5600A79DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3C65E1B9162E0C5600A79DEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3C65E1BB162E0C5600A79DEB /* SBMultiSelectViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SBMultiSelectViewDemo-Prefix.pch"; sourceTree = "<group>"; };
-		3C65E1BC162E0C5600A79DEB /* PKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKAppDelegate.h; sourceTree = "<group>"; };
-		3C65E1BD162E0C5600A79DEB /* PKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKAppDelegate.m; sourceTree = "<group>"; };
-		3C65E1BF162E0C5600A79DEB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		3C65E1C1162E0C5600A79DEB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		3C65E1C3162E0C5600A79DEB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		3C65E1C5162E0C5600A79DEB /* PKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKViewController.h; sourceTree = "<group>"; };
-		3C65E1C6162E0C5600A79DEB /* PKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKViewController.m; sourceTree = "<group>"; };
-		3C65E1C9162E0C5600A79DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PKViewController.xib; sourceTree = "<group>"; };
-		3C65E1D1162E0D8800A79DEB /* SBMultiSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMultiSelectView.h; sourceTree = "<group>"; };
-		3C65E1D2162E0D8800A79DEB /* SBMultiSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMultiSelectView.m; sourceTree = "<group>"; };
-		3C65E1DE162E0DC300A79DEB /* SBDraggableSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBDraggableSelectionView.h; path = ../../SBDraggableSelectionView/SBDraggableSelectionView.h; sourceTree = "<group>"; };
-		3C65E1DF162E0DC300A79DEB /* SBDraggableSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBDraggableSelectionView.m; path = ../../SBDraggableSelectionView/SBDraggableSelectionView.m; sourceTree = "<group>"; };
-		3C65E1E1162E115600A79DEB /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
-		3C65E1E2162E115600A79DEB /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
+		3C65E1EF162E13CF00A79DEB /* SBMultiSelectViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBMultiSelectViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C65E1F3162E13CF00A79DEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3C65E1F5162E13CF00A79DEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3C65E1F7162E13CF00A79DEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3C65E1FB162E13CF00A79DEB /* SBMultiSelectViewDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBMultiSelectViewDemo-Info.plist"; sourceTree = "<group>"; };
+		3C65E1FD162E13CF00A79DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3C65E1FF162E13CF00A79DEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3C65E201162E13CF00A79DEB /* SBMultiSelectViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SBMultiSelectViewDemo-Prefix.pch"; sourceTree = "<group>"; };
+		3C65E202162E13CF00A79DEB /* SBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAppDelegate.h; sourceTree = "<group>"; };
+		3C65E203162E13CF00A79DEB /* SBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAppDelegate.m; sourceTree = "<group>"; };
+		3C65E205162E13CF00A79DEB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3C65E207162E13CF00A79DEB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3C65E209162E13CF00A79DEB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3C65E20B162E13CF00A79DEB /* SBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBViewController.h; sourceTree = "<group>"; };
+		3C65E20C162E13CF00A79DEB /* SBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBViewController.m; sourceTree = "<group>"; };
+		3C65E20F162E13CF00A79DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SBViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3C65E1A6162E0C5600A79DEB /* Frameworks */ = {
+		3C65E1EC162E13CF00A79DEB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C65E1AE162E0C5600A79DEB /* UIKit.framework in Frameworks */,
-				3C65E1B0162E0C5600A79DEB /* Foundation.framework in Frameworks */,
-				3C65E1B2162E0C5600A79DEB /* CoreGraphics.framework in Frameworks */,
+				3C65E1F4162E13CF00A79DEB /* UIKit.framework in Frameworks */,
+				3C65E1F6162E13CF00A79DEB /* Foundation.framework in Frameworks */,
+				3C65E1F8162E13CF00A79DEB /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C65E19E162E0C5600A79DEB = {
+		3C65E1E4162E13CF00A79DEB = {
 			isa = PBXGroup;
 			children = (
-				3C65E1B3162E0C5600A79DEB /* SBMultiSelectViewDemo */,
-				3C65E1AC162E0C5600A79DEB /* Frameworks */,
-				3C65E1AA162E0C5600A79DEB /* Products */,
+				3C65E1F9162E13CF00A79DEB /* SBMultiSelectViewDemo */,
+				3C65E1F2162E13CF00A79DEB /* Frameworks */,
+				3C65E1F0162E13CF00A79DEB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3C65E1AA162E0C5600A79DEB /* Products */ = {
+		3C65E1F0162E13CF00A79DEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C65E1A9162E0C5600A79DEB /* SBMultiSelectViewDemo.app */,
+				3C65E1EF162E13CF00A79DEB /* SBMultiSelectViewDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3C65E1AC162E0C5600A79DEB /* Frameworks */ = {
+		3C65E1F2162E13CF00A79DEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C65E1AD162E0C5600A79DEB /* UIKit.framework */,
-				3C65E1AF162E0C5600A79DEB /* Foundation.framework */,
-				3C65E1B1162E0C5600A79DEB /* CoreGraphics.framework */,
+				3C65E1F3162E13CF00A79DEB /* UIKit.framework */,
+				3C65E1F5162E13CF00A79DEB /* Foundation.framework */,
+				3C65E1F7162E13CF00A79DEB /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3C65E1B3162E0C5600A79DEB /* SBMultiSelectViewDemo */ = {
+		3C65E1F9162E13CF00A79DEB /* SBMultiSelectViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3C65E1BC162E0C5600A79DEB /* PKAppDelegate.h */,
-				3C65E1BD162E0C5600A79DEB /* PKAppDelegate.m */,
-				3C65E1C5162E0C5600A79DEB /* PKViewController.h */,
-				3C65E1C6162E0C5600A79DEB /* PKViewController.m */,
-				3C65E1C8162E0C5600A79DEB /* PKViewController.xib */,
-				3C65E1D0162E0D8800A79DEB /* SBMultiSelectView */,
-				3C65E1B4162E0C5600A79DEB /* Supporting Files */,
-				3C65E1E1162E115600A79DEB /* UIColor+Random.h */,
-				3C65E1E2162E115600A79DEB /* UIColor+Random.m */,
+				3C65E202162E13CF00A79DEB /* SBAppDelegate.h */,
+				3C65E203162E13CF00A79DEB /* SBAppDelegate.m */,
+				3C65E20B162E13CF00A79DEB /* SBViewController.h */,
+				3C65E20C162E13CF00A79DEB /* SBViewController.m */,
+				3C65E20E162E13CF00A79DEB /* SBViewController.xib */,
+				3C65E1FA162E13CF00A79DEB /* Supporting Files */,
 			);
 			path = SBMultiSelectViewDemo;
 			sourceTree = "<group>";
 		};
-		3C65E1B4162E0C5600A79DEB /* Supporting Files */ = {
+		3C65E1FA162E13CF00A79DEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3C65E1B5162E0C5600A79DEB /* SBMultiSelectViewDemo-Info.plist */,
-				3C65E1B6162E0C5600A79DEB /* InfoPlist.strings */,
-				3C65E1B9162E0C5600A79DEB /* main.m */,
-				3C65E1BB162E0C5600A79DEB /* SBMultiSelectViewDemo-Prefix.pch */,
-				3C65E1BF162E0C5600A79DEB /* Default.png */,
-				3C65E1C1162E0C5600A79DEB /* Default@2x.png */,
-				3C65E1C3162E0C5600A79DEB /* Default-568h@2x.png */,
+				3C65E1FB162E13CF00A79DEB /* SBMultiSelectViewDemo-Info.plist */,
+				3C65E1FC162E13CF00A79DEB /* InfoPlist.strings */,
+				3C65E1FF162E13CF00A79DEB /* main.m */,
+				3C65E201162E13CF00A79DEB /* SBMultiSelectViewDemo-Prefix.pch */,
+				3C65E205162E13CF00A79DEB /* Default.png */,
+				3C65E207162E13CF00A79DEB /* Default@2x.png */,
+				3C65E209162E13CF00A79DEB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3C65E1D0162E0D8800A79DEB /* SBMultiSelectView */ = {
-			isa = PBXGroup;
-			children = (
-				3C65E1DE162E0DC300A79DEB /* SBDraggableSelectionView.h */,
-				3C65E1DF162E0DC300A79DEB /* SBDraggableSelectionView.m */,
-				3C65E1D1162E0D8800A79DEB /* SBMultiSelectView.h */,
-				3C65E1D2162E0D8800A79DEB /* SBMultiSelectView.m */,
-			);
-			name = SBMultiSelectView;
-			path = ../../../SBMultiSelectView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C65E1A8162E0C5600A79DEB /* SBMultiSelectViewDemo */ = {
+		3C65E1EE162E13CF00A79DEB /* SBMultiSelectViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C65E1CD162E0C5600A79DEB /* Build configuration list for PBXNativeTarget "SBMultiSelectViewDemo" */;
+			buildConfigurationList = 3C65E213162E13CF00A79DEB /* Build configuration list for PBXNativeTarget "SBMultiSelectViewDemo" */;
 			buildPhases = (
-				3C65E1A5162E0C5600A79DEB /* Sources */,
-				3C65E1A6162E0C5600A79DEB /* Frameworks */,
-				3C65E1A7162E0C5600A79DEB /* Resources */,
+				3C65E1EB162E13CF00A79DEB /* Sources */,
+				3C65E1EC162E13CF00A79DEB /* Frameworks */,
+				3C65E1ED162E13CF00A79DEB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -148,88 +124,85 @@
 			);
 			name = SBMultiSelectViewDemo;
 			productName = SBMultiSelectViewDemo;
-			productReference = 3C65E1A9162E0C5600A79DEB /* SBMultiSelectViewDemo.app */;
+			productReference = 3C65E1EF162E13CF00A79DEB /* SBMultiSelectViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3C65E1A0162E0C5600A79DEB /* Project object */ = {
+		3C65E1E6162E13CF00A79DEB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = PK;
+				CLASSPREFIX = SB;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Sam Broe";
 			};
-			buildConfigurationList = 3C65E1A3162E0C5600A79DEB /* Build configuration list for PBXProject "SBMultiSelectViewDemo" */;
+			buildConfigurationList = 3C65E1E9162E13CF00A79DEB /* Build configuration list for PBXProject "SBMultiSelectViewDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 3C65E19E162E0C5600A79DEB;
-			productRefGroup = 3C65E1AA162E0C5600A79DEB /* Products */;
+			mainGroup = 3C65E1E4162E13CF00A79DEB;
+			productRefGroup = 3C65E1F0162E13CF00A79DEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C65E1A8162E0C5600A79DEB /* SBMultiSelectViewDemo */,
+				3C65E1EE162E13CF00A79DEB /* SBMultiSelectViewDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3C65E1A7162E0C5600A79DEB /* Resources */ = {
+		3C65E1ED162E13CF00A79DEB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C65E1B8162E0C5600A79DEB /* InfoPlist.strings in Resources */,
-				3C65E1C0162E0C5600A79DEB /* Default.png in Resources */,
-				3C65E1C2162E0C5600A79DEB /* Default@2x.png in Resources */,
-				3C65E1C4162E0C5600A79DEB /* Default-568h@2x.png in Resources */,
-				3C65E1CA162E0C5600A79DEB /* PKViewController.xib in Resources */,
+				3C65E1FE162E13CF00A79DEB /* InfoPlist.strings in Resources */,
+				3C65E206162E13CF00A79DEB /* Default.png in Resources */,
+				3C65E208162E13CF00A79DEB /* Default@2x.png in Resources */,
+				3C65E20A162E13CF00A79DEB /* Default-568h@2x.png in Resources */,
+				3C65E210162E13CF00A79DEB /* SBViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3C65E1A5162E0C5600A79DEB /* Sources */ = {
+		3C65E1EB162E13CF00A79DEB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C65E1BA162E0C5600A79DEB /* main.m in Sources */,
-				3C65E1BE162E0C5600A79DEB /* PKAppDelegate.m in Sources */,
-				3C65E1C7162E0C5600A79DEB /* PKViewController.m in Sources */,
-				3C65E1D3162E0D8800A79DEB /* SBMultiSelectView.m in Sources */,
-				3C65E1E0162E0DC300A79DEB /* SBDraggableSelectionView.m in Sources */,
-				3C65E1E3162E115600A79DEB /* UIColor+Random.m in Sources */,
+				3C65E200162E13CF00A79DEB /* main.m in Sources */,
+				3C65E204162E13CF00A79DEB /* SBAppDelegate.m in Sources */,
+				3C65E20D162E13CF00A79DEB /* SBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3C65E1B6162E0C5600A79DEB /* InfoPlist.strings */ = {
+		3C65E1FC162E13CF00A79DEB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3C65E1B7162E0C5600A79DEB /* en */,
+				3C65E1FD162E13CF00A79DEB /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3C65E1C8162E0C5600A79DEB /* PKViewController.xib */ = {
+		3C65E20E162E13CF00A79DEB /* SBViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3C65E1C9162E0C5600A79DEB /* en */,
+				3C65E20F162E13CF00A79DEB /* en */,
 			);
-			name = PKViewController.xib;
+			name = SBViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3C65E1CB162E0C5600A79DEB /* Debug */ = {
+		3C65E211162E13CF00A79DEB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -256,7 +229,7 @@
 			};
 			name = Debug;
 		};
-		3C65E1CC162E0C5600A79DEB /* Release */ = {
+		3C65E212162E13CF00A79DEB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,7 +250,7 @@
 			};
 			name = Release;
 		};
-		3C65E1CE162E0C5600A79DEB /* Debug */ = {
+		3C65E214162E13CF00A79DEB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -288,7 +261,7 @@
 			};
 			name = Debug;
 		};
-		3C65E1CF162E0C5600A79DEB /* Release */ = {
+		3C65E215162E13CF00A79DEB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -302,24 +275,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C65E1A3162E0C5600A79DEB /* Build configuration list for PBXProject "SBMultiSelectViewDemo" */ = {
+		3C65E1E9162E13CF00A79DEB /* Build configuration list for PBXProject "SBMultiSelectViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C65E1CB162E0C5600A79DEB /* Debug */,
-				3C65E1CC162E0C5600A79DEB /* Release */,
+				3C65E211162E13CF00A79DEB /* Debug */,
+				3C65E212162E13CF00A79DEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C65E1CD162E0C5600A79DEB /* Build configuration list for PBXNativeTarget "SBMultiSelectViewDemo" */ = {
+		3C65E213162E13CF00A79DEB /* Build configuration list for PBXNativeTarget "SBMultiSelectViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C65E1CE162E0C5600A79DEB /* Debug */,
-				3C65E1CF162E0C5600A79DEB /* Release */,
+				3C65E214162E13CF00A79DEB /* Debug */,
+				3C65E215162E13CF00A79DEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3C65E1A0162E0C5600A79DEB /* Project object */;
+	rootObject = 3C65E1E6162E13CF00A79DEB /* Project object */;
 }
