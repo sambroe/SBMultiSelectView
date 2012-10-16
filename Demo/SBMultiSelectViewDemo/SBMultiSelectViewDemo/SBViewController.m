@@ -7,6 +7,7 @@
 //
 
 #import "SBViewController.h"
+#import "SBSelectableButton.h"
 
 @interface SBViewController ()
 
@@ -17,13 +18,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.multiSelectView = [[[SBMultiSelectView alloc] initWithFrame:CGRectZero direction:SBMultiSelectViewDirectionVertical] autorelease];
+    [_multiSelectView setDataSource:self];
+    [_multiSelectView setDelegate:self];
+    [self.view addSubview:_multiSelectView];
+    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
 }
 
-- (void)didReceiveMemoryWarning
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    
+    [_multiSelectView setFrame:CGRectMake(20.0, 20.0, CGRectGetWidth(self.view.frame) - 40.0, CGRectGetHeight(self.view.frame) - 40.0)];
 }
+
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return NO;
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+#pragma mark - SBMultiSelectViewDataSource/SBMultiSelectViewDelegate
+
+-(NSUInteger)numberOfButtonsInMultiSelectView:(SBMultiSelectView *)multiSelectView
+{
+    return 10;
+}
+
+-(UIButton *)multiSelectView:(SBMultiSelectView *)multiSelectView buttonForIndex:(NSUInteger)index
+{
+    UIButton *button = [SBSelectableButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:[NSString stringWithFormat:@"BUTTON %i", index] forState:UIControlStateNormal];
+    [button setTitle:[NSString stringWithFormat:@"BUTTON %i SELECTED", index] forState:UIControlStateSelected];
+    [button setFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame) - 40.0, 40.0)];
+    [button.titleLabel setTextAlignment:NSTextAlignmentLeft];
+    
+    return button;
+}
+
 
 @end

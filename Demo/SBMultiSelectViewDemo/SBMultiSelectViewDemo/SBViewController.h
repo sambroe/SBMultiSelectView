@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SBMultiSelectView.h"
 
-@interface SBViewController : UIViewController
+@interface SBViewController : UIViewController <SBMultiSelectViewDataSource, SBMultiSelectViewDelegate>
+
+@property (nonatomic, retain) SBMultiSelectView *multiSelectView;
 
 @end

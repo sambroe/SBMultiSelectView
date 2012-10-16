@@ -18,6 +18,10 @@
 		3C65E20A162E13CF00A79DEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E209162E13CF00A79DEB /* Default-568h@2x.png */; };
 		3C65E20D162E13CF00A79DEB /* SBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E20C162E13CF00A79DEB /* SBViewController.m */; };
 		3C65E210162E13CF00A79DEB /* SBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C65E20E162E13CF00A79DEB /* SBViewController.xib */; };
+		3C65E219162E142200A79DEB /* SBMultiSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E218162E142200A79DEB /* SBMultiSelectView.m */; };
+		3C65E21C162E142B00A79DEB /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E21B162E142B00A79DEB /* UIColor+Random.m */; };
+		3C65E21F162E145900A79DEB /* SBSelectableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E21E162E145900A79DEB /* SBSelectableButton.m */; };
+		3C65E222162E156B00A79DEB /* SBDraggableSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C65E221162E156B00A79DEB /* SBDraggableSelectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,14 @@
 		3C65E20B162E13CF00A79DEB /* SBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBViewController.h; sourceTree = "<group>"; };
 		3C65E20C162E13CF00A79DEB /* SBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBViewController.m; sourceTree = "<group>"; };
 		3C65E20F162E13CF00A79DEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SBViewController.xib; sourceTree = "<group>"; };
+		3C65E217162E142200A79DEB /* SBMultiSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMultiSelectView.h; sourceTree = "<group>"; };
+		3C65E218162E142200A79DEB /* SBMultiSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMultiSelectView.m; sourceTree = "<group>"; };
+		3C65E21A162E142B00A79DEB /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Random.h"; path = "../../../../../../../../../Desktop/UIColor+Random.h"; sourceTree = "<group>"; };
+		3C65E21B162E142B00A79DEB /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Random.m"; path = "../../../../../../../../../Desktop/UIColor+Random.m"; sourceTree = "<group>"; };
+		3C65E21D162E145900A79DEB /* SBSelectableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSelectableButton.h; sourceTree = "<group>"; };
+		3C65E21E162E145900A79DEB /* SBSelectableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSelectableButton.m; sourceTree = "<group>"; };
+		3C65E220162E156B00A79DEB /* SBDraggableSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBDraggableSelectionView.h; path = ../../SBDraggableSelectionView/SBDraggableSelectionView.h; sourceTree = "<group>"; };
+		3C65E221162E156B00A79DEB /* SBDraggableSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBDraggableSelectionView.m; path = ../../SBDraggableSelectionView/SBDraggableSelectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +97,15 @@
 			children = (
 				3C65E202162E13CF00A79DEB /* SBAppDelegate.h */,
 				3C65E203162E13CF00A79DEB /* SBAppDelegate.m */,
+				3C65E216162E142200A79DEB /* SBMultiSelectView */,
 				3C65E20B162E13CF00A79DEB /* SBViewController.h */,
 				3C65E20C162E13CF00A79DEB /* SBViewController.m */,
 				3C65E20E162E13CF00A79DEB /* SBViewController.xib */,
 				3C65E1FA162E13CF00A79DEB /* Supporting Files */,
+				3C65E21A162E142B00A79DEB /* UIColor+Random.h */,
+				3C65E21B162E142B00A79DEB /* UIColor+Random.m */,
+				3C65E21D162E145900A79DEB /* SBSelectableButton.h */,
+				3C65E21E162E145900A79DEB /* SBSelectableButton.m */,
 			);
 			path = SBMultiSelectViewDemo;
 			sourceTree = "<group>";
@@ -105,6 +122,18 @@
 				3C65E209162E13CF00A79DEB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C65E216162E142200A79DEB /* SBMultiSelectView */ = {
+			isa = PBXGroup;
+			children = (
+				3C65E220162E156B00A79DEB /* SBDraggableSelectionView.h */,
+				3C65E221162E156B00A79DEB /* SBDraggableSelectionView.m */,
+				3C65E217162E142200A79DEB /* SBMultiSelectView.h */,
+				3C65E218162E142200A79DEB /* SBMultiSelectView.m */,
+			);
+			name = SBMultiSelectView;
+			path = ../../../SBMultiSelectView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +206,10 @@
 				3C65E200162E13CF00A79DEB /* main.m in Sources */,
 				3C65E204162E13CF00A79DEB /* SBAppDelegate.m in Sources */,
 				3C65E20D162E13CF00A79DEB /* SBViewController.m in Sources */,
+				3C65E219162E142200A79DEB /* SBMultiSelectView.m in Sources */,
+				3C65E21C162E142B00A79DEB /* UIColor+Random.m in Sources */,
+				3C65E21F162E145900A79DEB /* SBSelectableButton.m in Sources */,
+				3C65E222162E156B00A79DEB /* SBDraggableSelectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +289,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SBMultiSelectViewDemo/SBMultiSelectViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "SBMultiSelectViewDemo/SBMultiSelectViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -267,6 +301,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SBMultiSelectViewDemo/SBMultiSelectViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "SBMultiSelectViewDemo/SBMultiSelectViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
