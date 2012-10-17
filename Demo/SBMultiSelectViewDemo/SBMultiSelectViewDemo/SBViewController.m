@@ -22,7 +22,7 @@
     self.multiSelectView = [[[SBMultiSelectView alloc] initWithFrame:CGRectZero direction:SBMultiSelectViewDirectionVertical] autorelease];
     [_multiSelectView setDataSource:self];
     [_multiSelectView setDelegate:self];
-    [_multiSelectView setScaleViewsToFit:NO];
+    [_multiSelectView setScaleViewsToFit:YES];
     [self.view addSubview:_multiSelectView];
     
     [self.view setBackgroundColor:[UIColor whiteColor]];

@@ -151,8 +151,6 @@
 {
     _direction = direction;
     
-    
-    
     [self setNeedsLayout];
 }
 
