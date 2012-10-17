@@ -22,6 +22,7 @@
     self.multiSelectView = [[[SBMultiSelectView alloc] initWithFrame:CGRectZero direction:SBMultiSelectViewDirectionVertical] autorelease];
     [_multiSelectView setDataSource:self];
     [_multiSelectView setDelegate:self];
+    [_multiSelectView setScaleViewsToFit:NO];
     [self.view addSubview:_multiSelectView];
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
@@ -30,8 +31,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [_multiSelectView setFrame:CGRectMake(20.0, 20.0, CGRectGetWidth(self.view.frame) - 40.0, CGRectGetHeight(self.view.frame) - 40.0)];
 }
 
 -(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -44,6 +43,13 @@
     {
         [_multiSelectView setDirection:SBMultiSelectViewDirectionVertical];
     }
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    [_multiSelectView setFrame:CGRectMake(20.0, 20.0, CGRectGetWidth(self.view.bounds) - 40.0, CGRectGetHeight(self.view.bounds) - 40.0)];
 }
 
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
@@ -69,6 +75,8 @@
     [button setTitle:[NSString stringWithFormat:@"BUTTON %i", index] forState:UIControlStateNormal];
     [button setTitle:[NSString stringWithFormat:@"BUTTON %i SELECTED", index] forState:UIControlStateSelected];
     [button setFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame) - 40.0, 40.0)];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [button.titleLabel setTextAlignment:NSTextAlignmentLeft];
     
     return button;

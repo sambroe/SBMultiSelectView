@@ -16,7 +16,7 @@
 @property (nonatomic, retain) UIView *touchInterceptorView;
 @property (nonatomic, assign) NSInteger currentlySelectedIndex;
 
--(void)setup;
+-(void)getData;
 -(void)selectButtonAtIndex:(NSUInteger)index;
 -(void)deselectButtonAtIndex:(NSUInteger)index;
 
@@ -69,15 +69,21 @@
     
     [_buttons enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
         
-        CGFloat width = (_scaleViewsToFit) ? floorf(CGRectGetWidth(self.frame)/_buttons.count) : CGRectGetWidth(button.frame);
-        CGFloat height = (_scaleViewsToFit) ? floorf(CGRectGetHeight(self.frame)/_buttons.count) : CGRectGetHeight(button.frame);
+        CGFloat width = 0.0;
+        CGFloat height = 0.0;
         
         if (_direction == SBMultiSelectViewDirectionHorizontal)
         {
+            width = (_scaleViewsToFit) ? floorf(CGRectGetWidth(self.frame)/_buttons.count) : CGRectGetWidth(button.frame);
+            height = (_scaleViewsToFit) ? CGRectGetHeight(self.frame) : CGRectGetHeight(button.frame);
+            
             [button setFrame:CGRectMake(CGRectGetMaxX(lastRect), 0.0, width, height)];
         }
         else
         {
+            width = (_scaleViewsToFit) ? CGRectGetWidth(self.frame) : CGRectGetWidth(button.frame);
+            height = (_scaleViewsToFit) ? floorf(CGRectGetHeight(self.frame)/_buttons.count) : CGRectGetHeight(button.frame);
+            
             [button setFrame:CGRectMake(0.0, CGRectGetMaxY(lastRect), width, height)];
         }
 
@@ -122,7 +128,7 @@
         
         if (_dataSource && _delegate)
         {
-            [self setup];
+            [self getData];
         }
     }
 }
@@ -136,7 +142,7 @@
         
         if (_dataSource && _delegate)
         {
-            [self setup];
+            [self getData];
         }
     }
 }
@@ -145,7 +151,16 @@
 {
     _direction = direction;
     
+    
+    
     [self setNeedsLayout];
+}
+
+-(void)setScaleViewsToFit:(BOOL)scaleViewsToFit
+{
+    _scaleViewsToFit = scaleViewsToFit;
+    
+    [self getData];
 }
 
 -(NSUInteger)numButtons
@@ -195,10 +210,11 @@
 
 #pragma mark - Private Methods
 
--(void)setup
+-(void)getData
 {
     if (!_dataSource || ![_dataSource respondsToSelector:@selector(multiSelectView:buttonForIndex:)]) return;
-    
+
+    NSArray *selectedIndicies = [self.selectedIndicies copy];
     self.buttons = [NSMutableArray array];
     
     [_buttonsView.subviews enumerateObjectsUsingBlock:^(UIView *view, NSUInteger idx, BOOL *stop) {
@@ -214,9 +230,14 @@
         
         [_buttons addObject:button];
         [_buttonsView addSubview:button];
+        
+        if ([selectedIndicies containsObject:@(i)])
+            [button setSelected:YES];
+
     }
     
     [self setSelectedIndicies:@[]];
+    [selectedIndicies release];
     
     [self setNeedsLayout];
 }

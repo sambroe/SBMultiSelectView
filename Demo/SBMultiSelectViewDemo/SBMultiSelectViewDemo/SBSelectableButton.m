@@ -41,7 +41,7 @@
 {
     [super setSelected:selected];
     
-    [_bgView setAlpha:(self.selected ? 1.0 : 0.5)];
+    [_bgView setAlpha:(self.selected ? 1.0 : 0.2)];
 }
 
 @end
