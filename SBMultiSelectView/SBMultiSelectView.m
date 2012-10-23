@@ -290,16 +290,13 @@
         if (self.directionVector.x != direction.x)
         {
             _directionChangePoint = point;
-            NSLog(@"Changed direction at point: %@", NSStringFromCGPoint(_directionChangePoint));
         }
-        
     }
     else
     {
         if (self.directionVector.y != direction.y)
         {
             _directionChangePoint = point;
-            NSLog(@"Changed direction at point: %@", NSStringFromCGPoint(_directionChangePoint));
         }
     }
     
@@ -323,8 +320,6 @@
                 {
                     _selectionState = (_selectionState == SBMultiSelectViewSelectionStateDeselecting) ? SBMultiSelectViewSelectionStateSelecting : SBMultiSelectViewSelectionStateDeselecting;
                     _directionChangePoint = CGPointZero;
-                    
-                    NSLog(@"CHANGED SELECTION STATE TO TO: %@", _selectionState == SBMultiSelectViewSelectionStateSelecting ? @"SELECTING" : @"DESELECTING");
                 }
             }
             
@@ -336,23 +331,6 @@
             {
                 [self deselectButtonAtIndex:idx];
             }
-
-//            NSInteger newDir = (_direction == SBMultiSelectViewDirectionVertical) ? direction.y : direction.x;
-//            NSInteger curDir = (_direction == SBMultiSelectViewDirectionVertical) ? self.directionVector.y : self.directionVector.x;
-//            
-//            if (_currentlySelectedIndex != idx || (newDir != 0 && newDir != curDir))
-//            {
-//                if (button.selected)
-//                {
-//                    [self deselectButtonAtIndex:idx];
-//                }
-//                else
-//                {
-//                    [self selectButtonAtIndex:idx];
-//                }
-//                
-//                _currentlySelectedIndex = idx;
-//            }
         }
         
     }];
