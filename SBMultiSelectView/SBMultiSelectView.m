@@ -40,7 +40,7 @@
         _currentlySelectedIndex = -1;
         _direction = SBMultiSelectViewDirectionVertical;
         _scaleViewsToFit = NO;
-        _thresholdForDirectionSwitch = 10.0;
+        _thresholdForDirectionSwitch = 5.0;
     }
     return self;
 }
@@ -258,6 +258,8 @@
     NSUInteger newIndex = (_delegate && [_delegate respondsToSelector:@selector(multiSelectView:willSelectButtonAtIndex:)]) ? [_delegate multiSelectView:self willSelectButtonAtIndex:index] : index;
     UIButton *button = _buttons[newIndex];
     
+    if (button.isSelected) return;
+    
     [button setSelected:YES];
     
     if (_delegate && [_delegate respondsToSelector:@selector(multiSelectView:didSelectButtonAtIndex:)])
@@ -270,6 +272,8 @@
 {
     NSUInteger newIndex = (_delegate && [_delegate respondsToSelector:@selector(multiSelectView:willDeselectButtonAtIndex:)]) ? [_delegate multiSelectView:self willDeselectButtonAtIndex:index] : index;
     UIButton *button = _buttons[newIndex];
+    
+    if (!button.isSelected) return;
     
     [button setSelected:NO];
     
@@ -307,38 +311,48 @@
         {
             if (_selectionState == SBMultiSelectViewSelectionStateNone)
             {
-                _selectionState = (button.selected) ? SBMultiSelectViewSelectionStateDeselecting : SBMultiSelectViewSelectionStateSelecting;
+                _selectionState = (button.isSelected) ? SBMultiSelectViewSelectionStateDeselecting : SBMultiSelectViewSelectionStateSelecting;
+                _directionChangePoint = CGPointZero;
             }
             
             if (!CGPointEqualToPoint(_directionChangePoint, CGPointZero))
             {                
                 CGFloat distanceFromDirectionChange = (_direction == SBMultiSelectViewDirectionHorizontal) ? fabsf(_directionChangePoint.x - point.x) : fabsf(_directionChangePoint.y - point.y);
                 
-                if (distanceFromDirectionChange > _thresholdForDirectionSwitch)
+                if (distanceFromDirectionChange >= _thresholdForDirectionSwitch)
                 {
                     _selectionState = (_selectionState == SBMultiSelectViewSelectionStateDeselecting) ? SBMultiSelectViewSelectionStateSelecting : SBMultiSelectViewSelectionStateDeselecting;
                     _directionChangePoint = CGPointZero;
                     
-                    NSLog(@"CHANGED DIRECTION TO: %i", _selectionState);
+                    NSLog(@"CHANGED SELECTION STATE TO TO: %@", _selectionState == SBMultiSelectViewSelectionStateSelecting ? @"SELECTING" : @"DESELECTING");
                 }
             }
             
-            NSInteger newDir = (_direction == SBMultiSelectViewDirectionVertical) ? direction.y : direction.x;
-            NSInteger curDir = (_direction == SBMultiSelectViewDirectionVertical) ? self.directionVector.y : self.directionVector.x;
-            
-            if (_currentlySelectedIndex != idx || (newDir != 0 && newDir != curDir))
+            if (_selectionState == SBMultiSelectViewSelectionStateSelecting)
             {
-                if (button.selected)
-                {
-                    [self deselectButtonAtIndex:idx];
-                }
-                else
-                {
-                    [self selectButtonAtIndex:idx];
-                }
-                
-                _currentlySelectedIndex = idx;
+                [self selectButtonAtIndex:idx];
             }
+            else
+            {
+                [self deselectButtonAtIndex:idx];
+            }
+
+//            NSInteger newDir = (_direction == SBMultiSelectViewDirectionVertical) ? direction.y : direction.x;
+//            NSInteger curDir = (_direction == SBMultiSelectViewDirectionVertical) ? self.directionVector.y : self.directionVector.x;
+//            
+//            if (_currentlySelectedIndex != idx || (newDir != 0 && newDir != curDir))
+//            {
+//                if (button.selected)
+//                {
+//                    [self deselectButtonAtIndex:idx];
+//                }
+//                else
+//                {
+//                    [self selectButtonAtIndex:idx];
+//                }
+//                
+//                _currentlySelectedIndex = idx;
+//            }
         }
         
     }];
