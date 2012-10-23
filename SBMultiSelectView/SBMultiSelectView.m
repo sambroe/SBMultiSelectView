@@ -324,8 +324,6 @@
                 }
             }
             
-            NSLog(@"%@", (_selectionState == SBMultiSelectViewSelectionStateSelecting) ? @"Selecting" : @"Deselecting");
-            
             if (_selectionState == SBMultiSelectViewSelectionStateSelecting)
             {
                 [self selectButtonAtIndex:idx];
