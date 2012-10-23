@@ -16,6 +16,14 @@ typedef enum
 }
 SBMultiSelectViewDirection;
 
+typedef enum
+{
+    SBMultiSelectViewSelectionStateNone = 0,
+    SBMultiSelectViewSelectionStateSelecting,
+    SBMultiSelectViewSelectionStateDeselecting
+}
+SBMultiSelectViewSelectionState;
+
 @class SBMultiSelectView;
 
 @protocol SBMultiSelectViewDelegate <NSObject>
@@ -41,7 +49,9 @@ SBMultiSelectViewDirection;
 @property (nonatomic, assign) id <SBMultiSelectViewDelegate> delegate;
 @property (nonatomic, retain) NSArray *selectedIndicies;
 @property (nonatomic, assign) SBMultiSelectViewDirection direction;
+@property (nonatomic, assign) SBMultiSelectViewSelectionState selectionState;
 @property (nonatomic, assign) BOOL scaleViewsToFit;
+@property (nonatomic, assign) CGFloat thresholdForDirectionSwitch;
 
 -(id)initWithFrame:(CGRect)frame direction:(SBMultiSelectViewDirection)direction;
 

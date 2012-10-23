@@ -15,6 +15,7 @@
 @property (nonatomic, retain) UIView *buttonsView;
 @property (nonatomic, retain) UIView *touchInterceptorView;
 @property (nonatomic, assign) NSInteger currentlySelectedIndex;
+@property (nonatomic, assign) CGPoint directionChangePoint;
 
 -(void)getData;
 -(void)selectButtonAtIndex:(NSUInteger)index;
@@ -39,6 +40,7 @@
         _currentlySelectedIndex = -1;
         _direction = SBMultiSelectViewDirectionVertical;
         _scaleViewsToFit = NO;
+        _thresholdForDirectionSwitch = 10.0;
     }
     return self;
 }
@@ -102,19 +104,30 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    _selectionState = SBMultiSelectViewSelectionStateNone;
+    
     [super touchesBegan:touches withEvent:event];
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{    
+{
     [super touchesMoved:touches withEvent:event];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    _selectionState = SBMultiSelectViewSelectionStateNone;
+    
     [super touchesEnded:touches withEvent:event];
     
     _currentlySelectedIndex = -1;
+}
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    _selectionState = SBMultiSelectViewSelectionStateNone;
+    
+    [super touchesCancelled:touches withEvent:event];
 }
 
 #pragma mark - Getters/Setters
@@ -268,14 +281,50 @@
 
 -(void)evalutateSelectionForPoint:(CGPoint)point directon:(CGPoint)direction
 {
+    if (_direction == SBMultiSelectViewDirectionHorizontal)
+    {
+        if (self.directionVector.x != direction.x)
+        {
+            _directionChangePoint = point;
+            NSLog(@"Changed direction at point: %@", NSStringFromCGPoint(_directionChangePoint));
+        }
+        
+    }
+    else
+    {
+        if (self.directionVector.y != direction.y)
+        {
+            _directionChangePoint = point;
+            NSLog(@"Changed direction at point: %@", NSStringFromCGPoint(_directionChangePoint));
+        }
+    }
+    
     [super evalutateSelectionForPoint:point directon:direction];
     
     [_buttons enumerateObjectsUsingBlock:^(UIButton *button, NSUInteger idx, BOOL *stop) {
         
         if (CGRectContainsPoint(button.frame, point))
         {
+            if (_selectionState == SBMultiSelectViewSelectionStateNone)
+            {
+                _selectionState = (button.selected) ? SBMultiSelectViewSelectionStateDeselecting : SBMultiSelectViewSelectionStateSelecting;
+            }
+            
+            if (!CGPointEqualToPoint(_directionChangePoint, CGPointZero))
+            {                
+                CGFloat distanceFromDirectionChange = (_direction == SBMultiSelectViewDirectionHorizontal) ? fabsf(_directionChangePoint.x - point.x) : fabsf(_directionChangePoint.y - point.y);
+                
+                if (distanceFromDirectionChange > _thresholdForDirectionSwitch)
+                {
+                    _selectionState = (_selectionState == SBMultiSelectViewSelectionStateDeselecting) ? SBMultiSelectViewSelectionStateSelecting : SBMultiSelectViewSelectionStateDeselecting;
+                    _directionChangePoint = CGPointZero;
+                    
+                    NSLog(@"CHANGED DIRECTION TO: %i", _selectionState);
+                }
+            }
+            
             NSInteger newDir = (_direction == SBMultiSelectViewDirectionVertical) ? direction.y : direction.x;
-            NSInteger curDir = (_direction == SBMultiSelectViewDirectionVertical) ? self.currentYDir : self.currentXDir;
+            NSInteger curDir = (_direction == SBMultiSelectViewDirectionVertical) ? self.directionVector.y : self.directionVector.x;
             
             if (_currentlySelectedIndex != idx || (newDir != 0 && newDir != curDir))
             {
