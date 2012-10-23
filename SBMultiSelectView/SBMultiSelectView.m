@@ -116,18 +116,19 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    _selectionState = SBMultiSelectViewSelectionStateNone;
     
     [super touchesEnded:touches withEvent:event];
     
+    _selectionState = SBMultiSelectViewSelectionStateNone;
     _currentlySelectedIndex = -1;
 }
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    _selectionState = SBMultiSelectViewSelectionStateNone;
-    
     [super touchesCancelled:touches withEvent:event];
+    
+    _selectionState = SBMultiSelectViewSelectionStateNone;
+    _currentlySelectedIndex = -1;
 }
 
 #pragma mark - Getters/Setters
@@ -322,6 +323,8 @@
                     _directionChangePoint = CGPointZero;
                 }
             }
+            
+            NSLog(@"%@", (_selectionState == SBMultiSelectViewSelectionStateSelecting) ? @"Selecting" : @"Deselecting");
             
             if (_selectionState == SBMultiSelectViewSelectionStateSelecting)
             {
